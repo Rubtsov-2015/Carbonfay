@@ -93,9 +93,16 @@ $(document).ready(function(){
 	$('.burger_menu').click(function(){
 		$(this).toggleClass('open');
 		if($(this).hasClass('open')){
-			$('header nav ul').slideDown();
+			$('header nav').addClass('active')
+			$('body').addClass('ovh')
+			$('header nav ul').fadeIn();
+			setTimeout(function(){
+				$('header nav ul').addClass('active');
+			}, 200)
 		}else{
-			$('header nav ul').slideUp();
+			$('header nav, header nav ul').removeClass('active')
+			$('body').removeClass('ovh')
+			$('header nav ul').fadeOut();
 		}
 
 	});

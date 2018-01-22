@@ -130,6 +130,16 @@
 	}
 }
 @media screen and (max-width: 750px) {
+	body.ovh{
+		overflow: hidden;
+	}
+	.logo{
+		z-index: 9999999;
+		position: relative;
+	}
+	header{
+		padding: 2.8125rem 30px 0;
+	}
 	header nav{
 		position: relative;
 		margin: 10px 0 0;
@@ -153,6 +163,52 @@
 		-webkit-box-shadow: 0px 2px 5px 0px rgba(50, 50, 50, 0.75);
 		-moz-box-shadow:    0px 2px 5px 0px rgba(50, 50, 50, 0.75);
 		box-shadow:         0px 2px 5px 0px rgba(50, 50, 50, 0.75);
+
+		position: fixed;
+		left: 0;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		z-index: 99999;
+		background: #fff;
+		margin: 0;
+		padding: 80px 0 0;
+		text-align: center;
+	}
+	header nav.active ul{
+		position: fixed;
+		left: 0;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		z-index: 99999;
+		background: #fff;
+		margin: 0;
+		padding: 80px 0 0;
+		text-align: center;
+	}
+	header nav ul li{
+		-moz-transform: scale(0.2);
+		-webkit-transform: scale(0.2);
+		-o-transform: scale(0.2);
+		-ms-transform: scale(0.2);
+		transform: scale(0.2);
+		-webkit-transition: all 0.6s ease-in-out;
+		   -moz-transition: all 0.6s ease-in-out;
+			-ms-transition: all 0.6s ease-in-out;
+			 -o-transition: all 0.6s ease-in-out;
+				transition: all 0.6s ease-in-out;
+	}
+	header nav ul.active li{
+		-moz-transform: scale(1);
+		-webkit-transform: scale(1);
+		-o-transform: scale(1);
+		-ms-transform: scale(1);
+		transform: scale(1);
+	}
+	header li{
+		font-size: 30px;
+		line-height: 34px;
 	}
 	header li{
 		display: block;
@@ -167,6 +223,7 @@
 		float: right;
 		width: 30px;
 		height: 20px;
+		z-index: 9999999;
 	}
 	.burger_menu:before{
 		content: '';
@@ -317,12 +374,18 @@
 	}
 }
 @media screen and (max-width: 550px) {
+	header{
+		padding: 2.8125rem 15px 0;
+	}
 	h2{
 		font-size: 30px;
 		line-height: 35px;
 	}
 	.slogan_wrapper h2{
 		letter-spacing: 1px;
+	}
+	header nav{
+		margin: 8px 0 0;
 	}
 	footer nav{
 		margin: 0;
@@ -333,6 +396,7 @@
 	footer nav>ul>li{
 		width: 100%;
 		margin: 0 0 20px;
+		padding: 0;
 	}
 	.center, .center_2, .center_3{
 		padding: 0 15px;
